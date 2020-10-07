@@ -24,6 +24,7 @@ const PATHS = {
   dist: path.resolve(__dirname, '../dist'),
   assets: 'assets',
   pug: 'pug',
+  entries: 'entries',
 };
 
 const ALIASES = {
@@ -37,10 +38,10 @@ const ALIASES = {
 };
 
 // Pages const for HtmlWebpackPlugin
-const PAGES_DIR = `${PATHS.src}/pages/`;
+const PAGES_DIR = `${PATHS.src}/${PATHS.entries}/`;
 // Entries const for entry option
-const ENTRIES_DIR = `${PATHS.src}/pages/`;
-// All pages to build
+const ENTRIES_DIR = `${PATHS.src}/${PATHS.entries}/`;
+// All pages templates to build
 const PAGES = fs.readdirSync(PAGES_DIR);
 // All entries to take.
 const ENTRIES_LIST = fs.readdirSync(ENTRIES_DIR);
