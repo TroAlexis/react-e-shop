@@ -4,7 +4,7 @@
       "classAttribute": "styleName"
     }],
     ["transform-jsx-css-modules", {
-      "pathToStyles": "^\\.\\/\\w+.module$"
+      "pathToStyles": "^\\.\\/.*\\.module(.scss)?$"
     }],
     "transform-class-properties"
   ],

@@ -1,0 +1,57 @@
+.menu-item {
+	display: flex;
+	flex: 1 1 auto;
+	align-items: center;
+	justify-content: center;
+	min-width: 30%;
+	height: 240px;
+	margin: 0 7.5px 15px;
+
+	border: 1px solid #000;
+
+	background: {
+		position: center;
+		size: cover;
+	};
+
+	&:first-child {
+		margin-right: 7.5px;
+	}
+
+	&:last-child {
+		margin-left: 7.5px;
+	}
+
+	&.large {
+		height: 380px;
+	}
+
+	&.small {
+		height: 200px;
+	}
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 90px;
+	padding: 0 25px;
+
+	border: 1px solid #000;
+  
+}
+
+.title {
+	margin-bottom: 6px;
+
+	color: #4a4a4a;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.subtitle {
+	font-weight: lighter;
+	font-size: 16px;
+}
