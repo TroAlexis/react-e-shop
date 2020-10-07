@@ -8,9 +8,10 @@ const MenuItem = ({
 }) => {
   const backgroundImage = `url(${imageUrl})`;
   return pug`
-    .menu-item(styleName=size style={backgroundImage: backgroundImage})
+    .menu-item(styleName=size)
+      .background-image(style={backgroundImage: backgroundImage})
       .content
-        h1.title=title
+        h1.title=title.toUpperCase()
         span.subtitle=subtitle
 `;
 };
@@ -20,6 +21,10 @@ MenuItem.propTypes = {
   subtitle: PropTypes.string,
   imageUrl: PropTypes.string,
   size: PropTypes.string,
+};
+
+MenuItem.defaultProps = {
+  size: '',
 };
 
 export default MenuItem;

@@ -16,7 +16,6 @@ export default class Directory extends React.Component {
           subtitle: 'SHOP NOW',
           imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
           id: 1,
-          size: 'small',
           linkUrl: 'shop/hats',
         },
         {
@@ -24,7 +23,6 @@ export default class Directory extends React.Component {
           subtitle: 'SHOP NOW',
           imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
           id: 2,
-          size: 'small',
           linkUrl: 'shop/jackets',
         },
         {
@@ -32,7 +30,6 @@ export default class Directory extends React.Component {
           subtitle: 'SHOP NOW',
           imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
           id: 3,
-          size: 'small',
           linkUrl: 'shop/sneakers',
         },
         {
