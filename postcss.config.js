@@ -6,6 +6,15 @@ module.exports = {
   plugins: {
     autoprefixer: {},
     'css-mqpacker': {},
+    // put your font variants there along with the font-weight and formats in the array
+    'postcss-font-magician': {
+      variants: {
+        'Open Sans Condensed': {
+          300: [],
+          700: [],
+        },
+      },
+    },
     cssnano: {
       preset: [
         'default', {
@@ -14,16 +23,6 @@ module.exports = {
           },
         },
       ],
-    },
-    // put your font variants there along with the font-weight and formats in the array
-    'postcss-font-magician': {
-      variants: {
-        Rubik: {
-          400: [],
-          500: [],
-          700: [],
-        },
-      },
     },
   },
 };
