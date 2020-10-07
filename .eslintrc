@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react-pug"
+  ],
+  "extends": [
+    "airbnb",
+    "plugin:react-pug/all"
+  ],
+  "rules": {
+    "import/no-unresolved": "off",
+    "import/extensions": 0,
+    "import/no-extraneous-dependencies": "off"
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  }
+}

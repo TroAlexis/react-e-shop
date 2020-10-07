@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    ["transform-react-pug", {
+      "classAttribute": "styleName"
+    }],
+    ["transform-jsx-css-modules", {
+      "pathToStyles": "^\\.\\/\\w+.module$"
+    }],
+    "transform-class-properties"
+  ],
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ]
+}
