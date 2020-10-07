@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import MenuItem from 'Components/menu-item/menu-item';
 
-import './directory.module';
+import './directory.module.scss';
 
 export default class Directory extends React.Component {
   constructor(props) {

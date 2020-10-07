@@ -2,7 +2,7 @@ import React from 'react';
 
 import Directory from 'Components/directory/directory';
 
-import './homepage.module';
+import './homepage.module.scss';
 
 const HomePage = () => pug`
   .homepage
