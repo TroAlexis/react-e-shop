@@ -58,8 +58,8 @@ export default class Directory extends React.Component {
     return pug`
       .directory-menu
         each section in sections
-          - const { title, subtitle, imageUrl, id, size } = section;
-          MenuItem(key=id, title=title, subtitle=subtitle, imageUrl=imageUrl, size=size)
+          - const { id, ...otherSectionProps} = section;
+          MenuItem(key=id ...otherSectionProps)
     `;
   }
 }

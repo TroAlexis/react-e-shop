@@ -1,15 +1,19 @@
 // WEBPACK ENTRY FILE MAIN
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from "react-router-dom";
 
 // SCSS
 import 'Scss/shared.scss';
 
 // JS
-import HomePage from '~/js/pages/homepage/homepage';
+import App from '~/js/App';
 
 const wrapper = document.querySelector('.root');
-ReactDOM.render(pug`HomePage`, wrapper);
+ReactDOM.render(pug`
+  BrowserRouter
+    App
+`, wrapper);
 
 if (module.hot) {
   module.hot.accept();
