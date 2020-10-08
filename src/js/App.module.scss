@@ -1,0 +1,7 @@
+@import '~Scss/utils/global';
+
+:global {
+	body {
+		padding: rem(20) rem(60);
+	}
+}

@@ -1,7 +1,7 @@
 // WEBPACK ENTRY FILE MAIN
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
 
 // SCSS
 import 'Scss/shared.scss';
@@ -14,7 +14,3 @@ ReactDOM.render(pug`
   BrowserRouter
     App
 `, wrapper);
-
-if (module.hot) {
-  module.hot.accept();
-}
