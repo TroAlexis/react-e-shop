@@ -13,6 +13,10 @@ const CollectionItem = ({
       .name=name
       .price=price
   `;
-CollectionItem.propTypes = {};
+CollectionItem.propTypes = {
+  name: PropTypes.string,
+  price: PropTypes.string,
+  imageUrl: PropTypes.string,
+};
 
 export default CollectionItem;
