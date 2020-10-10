@@ -1,0 +1,62 @@
+@import '~Scss/utils/global';
+
+$sub-color: #808080;
+$main-color: #000;
+
+@mixin shrink-label {
+	top: -14px;
+
+	color: $main-color;
+	font-size: rem(16px);
+}
+
+.group {
+	position: relative;
+
+	margin: 45px 0;
+
+	.password {
+		letter-spacing: 0.3em;
+	}
+}
+
+.input {
+	display: block;
+	width: 100%;
+	margin: 25px 0;
+	padding: 10px 10px 10px 5px;
+
+	color: $sub-color;
+	font-size: 18px;
+
+	background: #fff none;
+	border: 0;
+	border-bottom: 1px solid $sub-color;
+	border-radius: 0;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:focus ~ .label {
+		@include shrink-label();
+	}
+}
+
+.label {
+	position: absolute;
+	top: 10px;
+	left: 5px;
+
+	color: $sub-color;
+	font-weight: normal;
+	font-size: rem(20px);
+
+	transition: 300ms ease all;
+
+	pointer-events: none;
+
+	&.shrink {
+		@include shrink-label();
+	}
+}

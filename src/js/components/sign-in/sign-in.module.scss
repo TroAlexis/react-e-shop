@@ -1,0 +1,19 @@
+@import '~Scss/utils/global';
+
+.sign-in {
+	display: flex;
+	flex-direction: column;
+	width: 30vw;
+}
+
+.title {
+	margin: 10px 0;
+
+	font-weight: 600;
+
+	font-size: rem(30px);
+}
+
+.subtitle {
+	font-size: rem(22px);
+}

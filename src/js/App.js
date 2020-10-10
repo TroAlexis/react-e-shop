@@ -6,6 +6,7 @@ import './App.module.scss';
 import Header from 'Components/header/header';
 import HomePage from '~/js/pages/homepage/homepage';
 import ShopPage from '~/js/pages/shop/shop';
+import SignInUp from '~/js/pages/sign-in-up/sign-in-up';
 
 function App() {
   return pug`
@@ -13,7 +14,10 @@ function App() {
       Header
       Switch
         Route(exact path="/" component=HomePage)
+        
         Route(path="/shop" component=ShopPage)
+        
+        Route(path="/signin" component=SignInUp)
   `;
 }
 
