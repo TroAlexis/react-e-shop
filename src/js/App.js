@@ -8,11 +8,9 @@ import HomePage from '~/js/pages/homepage/homepage';
 import ShopPage from '~/js/pages/shop/shop';
 import SignInUp from '~/js/pages/sign-in-up/sign-in-up';
 
-import { auth } from '~/firebase/firebase.utils';
+import { auth, createUserProfileDocument } from '~/firebase/firebase.utils';
 
-class App extends React.Component {
-  unsubscribeFromAuth = null;
-
+export default class App extends React.Component {
   constructor() {
     super();
 
@@ -22,8 +20,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
-      this.setState({ currentUser: user });
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (user) => {
+      await createUserProfileDocument(user);
     });
   }
 
@@ -31,18 +29,18 @@ class App extends React.Component {
     this.unsubscribeFromAuth();
   }
 
+  unsubscribeFromAuth = () => {};
+
   render() {
     return pug`
       div
         Header(currentUser=this.state.currentUser)
         Switch
           Route(exact path="/" component=HomePage)
-
+          
           Route(path="/shop" component=ShopPage)
-
+          
           Route(path="/signin" component=SignInUp)
     `;
   }
 }
-
-export default App;

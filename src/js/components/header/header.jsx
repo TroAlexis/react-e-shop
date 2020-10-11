@@ -14,9 +14,12 @@ const Header = ({ currentUser }) => pug`
       
     .options
       Link.option(to="/shop") SHOP
+      
       Link.option(to="/shop") CONTACT
+      
       if currentUser
         div.option(onClick=() => auth.signOut()) SIGN OUT
+        
       else
         Link.option(to="/signin") SIGN IN
 `;
