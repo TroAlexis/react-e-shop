@@ -3,8 +3,10 @@
 $sub-color: #808080;
 $main-color: #000;
 
+$label-fz: rem(20px);
+
 @mixin shrink-label {
-	top: -14px;
+	top: -1 * $label-fz;
 
 	color: $main-color;
 	font-size: rem(16px);
@@ -35,7 +37,9 @@ $main-color: #000;
 	border-radius: 0;
 
 	&:focus {
-		outline: none;
+		color: $main-color;
+
+		background-color: rgb(126, 212, 185, 0.15);
 	}
 
 	&:focus ~ .label {
@@ -45,12 +49,12 @@ $main-color: #000;
 
 .label {
 	position: absolute;
-	top: 10px;
+	top: 7px;
 	left: 5px;
 
 	color: $sub-color;
 	font-weight: normal;
-	font-size: rem(20px);
+	font-size: $label-fz;
 
 	transition: 300ms ease all;
 

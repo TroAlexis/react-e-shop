@@ -3,10 +3,17 @@ import PropTypes from 'prop-types';
 
 import './custom-button.module.scss';
 
-const CustomButton = ({ children, ...otherProps }) => pug`
-  button.custom-button=children
+const CustomButton = ({ children, isGoogleSignIn, ...otherProps }) => pug`
+  button.custom-button(styleName=isGoogleSignIn ? "google-sign-in": "", ...otherProps)=children
 `;
 
-CustomButton.propTypes = {};
+CustomButton.propTypes = {
+  children: PropTypes.oneOfType(
+    [
+      PropTypes.string,
+      PropTypes.array,
+    ],
+  ),
+};
 
 export default CustomButton;

@@ -3,7 +3,7 @@
 .sign-in {
 	display: flex;
 	flex-direction: column;
-	width: 30vw;
+	width: 380px;
 }
 
 .title {
@@ -16,4 +16,9 @@
 
 .subtitle {
 	font-size: rem(22px);
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-between;
 }
