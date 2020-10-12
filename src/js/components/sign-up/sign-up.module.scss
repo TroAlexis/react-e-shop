@@ -1,9 +1,10 @@
 @import '~Scss/utils/global';
 
-.sign-in {
+.sign-up {
 	display: flex;
 	flex-direction: column;
 	width: 380px;
+
 }
 
 .title {
@@ -12,9 +13,4 @@
 
 .subtitle {
 	@extend %subtitle-form;
-}
-
-.buttons {
-	display: flex;
-	justify-content: space-between;
 }
