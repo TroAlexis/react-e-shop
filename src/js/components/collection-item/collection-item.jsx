@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import CustomButton from 'Components/custom-button/custom-button';
+
 import './collection-item.module.scss';
 
 const CollectionItem = ({
@@ -12,6 +14,8 @@ const CollectionItem = ({
     .collection-footer
       .name=name
       .price=price
+        
+    CustomButton.button(inverted) Add to cart
   `;
 CollectionItem.propTypes = {
   name: PropTypes.string,

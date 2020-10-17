@@ -27,6 +27,7 @@ const Header = ({ currentUser, hidden }) => pug`
         Link.option(to="/signin") SIGN IN
         
       CartIcon
+      
     if !hidden
       CartDropdown
 `;

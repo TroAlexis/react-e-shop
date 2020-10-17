@@ -43,7 +43,6 @@ class App extends React.Component {
 
   render() {
     const { currentUser } = this.props;
-    const isAuthorised = () => (currentUser ? pug`Redirect(to="/")` : pug`SignInUp`);
 
     return pug`
       div
@@ -53,7 +52,7 @@ class App extends React.Component {
           
           Route(path="/shop" component=ShopPage)
           
-          Route(exact path="/signin" render=isAuthorised)
+          Route(exact path="/signin" render=${() => (currentUser ? pug`Redirect(to="/")` : pug`SignInUp`)})
     `;
   }
 }
