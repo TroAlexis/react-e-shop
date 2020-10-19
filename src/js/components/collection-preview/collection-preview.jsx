@@ -9,9 +9,7 @@ const CollectionPreview = ({ title, items }) => pug`
     h1.title=title.toUpperCase()
     div.preview
       each item in items.filter((item, index) => index < 4)
-        - const { id, ...otherItemProps } = item
-        CollectionItem(key=id ...otherItemProps)
-      
+        CollectionItem(key=item.id item=item)
 `;
 
 CollectionPreview.propTypes = {
