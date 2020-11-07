@@ -9,6 +9,7 @@ import Header from 'Components/header/header';
 import HomePage from '~/js/pages/homepage/homepage';
 import ShopPage from '~/js/pages/shop/shop';
 import SignInUp from '~/js/pages/sign-in-up/sign-in-up';
+import CheckoutPage from '~/js/pages/checkout/checkout';
 
 import { auth, createUserProfileDocument } from '~/firebase/firebase.utils';
 
@@ -54,6 +55,8 @@ class App extends React.Component {
           Route(exact path="/" component=HomePage)
           
           Route(path="/shop" component=ShopPage)
+          
+          Route(exact path="/checkout" component=CheckoutPage)
           
           Route(exact path="/signin" render=${() => (currentUser ? pug`Redirect(to="/")` : pug`SignInUp`)})
     `;
