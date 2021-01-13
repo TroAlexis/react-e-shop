@@ -5,8 +5,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
-import store from '~/js/redux/store';
+import { store, persistor } from '~/js/redux/store';
 
 // SCSS
 import 'Scss/shared.scss';
@@ -20,5 +21,6 @@ ReactDOM.render(pug`
     store=store
   )
     BrowserRouter
-      App
+      PersistGate(persistor=persistor)
+        App
 `, wrapper);
