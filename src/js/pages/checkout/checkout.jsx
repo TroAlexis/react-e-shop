@@ -25,6 +25,7 @@ const CheckoutPage = ({ cartItems, total }) => pug`
         
       .header-block
         span Remove
+        
     each item in cartItems
       CheckoutItem(cartItem=item key=item.id)
       
