@@ -10,12 +10,12 @@ import './collection-item.module.scss';
 
 const CollectionItem = ({
 // eslint-disable-next-line react-pug/prop-types
-  item, addItem,
+  item, addItem, className,
 }) => {
   const { name, price, imageUrl } = item;
 
   return pug`
-    .collection-item
+    .collection-item(className=className)
       .image(style={backgroundImage: 'url(' + imageUrl + ')'})
       .collection-footer
         .name=name

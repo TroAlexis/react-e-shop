@@ -1,30 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Route } from 'react-router-dom';
+
+// import PropTypes from 'prop-types';
 
 import './shop.module.scss';
+import CollectionsOverview from 'Components/collections-overview/collections-overview';
+import CollectionPage from '~/js/pages/collection/collection';
 
-import CollectionPreview from 'Components/collection-preview/collection-preview';
-import SHOP_DATA from './shop.data';
+const ShopPage = ({ match }) => (pug`
+  div.shop-page
+    Route(exact path=match.path component=CollectionsOverview)
+    Route(path=${`${match.path}/:collectionId`} component=CollectionPage)
+`);
 
-export default class ShopPage extends React.Component {
-  constructor(props) {
-    super(props);
+// ShopPage.propTypes = {};
 
-    this.state = {
-      collections: SHOP_DATA,
-    };
-  }
-
-  render() {
-    const { collections } = this.state;
-
-    return pug`
-      div
-        each collection in collections
-          - const { id, ...otherCollectionProps } = collection
-          CollectionPreview(key=id ...otherCollectionProps)
-    `;
-  }
-}
-
-ShopPage.propTypes = {};
+export default ShopPage;
