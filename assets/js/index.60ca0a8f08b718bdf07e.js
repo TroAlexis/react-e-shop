@@ -14,7 +14,7 @@
   \************************************/
 /*! no exports provided */
 /*! all exports used */
-/*! ModuleConcatenation bailout: Module is an entry point */function(e,n,t){"use strict";t.r(n);t(/*! core-js/stable */191),t(/*! regenerator-runtime/runtime */415);var a=t(/*! react */0),s=t.n(a),r=t(/*! react-dom */101),o=t.n(r),c=t(/*! react-router-dom */40),p=t(/*! react-redux */16),i=t(/*! redux-persist/integration/react */184),f=t(/*! ~/js/redux/store */138),g=(t(/*! ../../assets/scss/shared.scss */427),t(/*! ~/js/App */189));var u=document.querySelector(".root");o.a.render(s.a.createElement(p.a,{store:f.b},s.a.createElement(c.a,null,s.a.createElement(i.a,{persistor:f.a},s.a.createElement(g.a,null)))),u)},42:
+/*! ModuleConcatenation bailout: Module is an entry point */function(e,n,t){"use strict";t.r(n);t(/*! core-js/stable */191),t(/*! regenerator-runtime/runtime */415);var a=t(/*! react */0),s=t.n(a),r=t(/*! react-dom */101),o=t.n(r),c=t(/*! react-router-dom */40),p=t(/*! react-redux */16),i=t(/*! redux-persist/integration/react */184),f=t(/*! ~/js/redux/store */138),g=(t(/*! ../../assets/scss/shared.scss */427),t(/*! ~/js/App */189));var u=document.querySelector(".root");o.a.render(s.a.createElement(p.a,{store:f.b},s.a.createElement(c.a,{basename:"/react-e-shop"},s.a.createElement(i.a,{persistor:f.a},s.a.createElement(g.a,null)))),u)},42:
 /*!****************************************!*\
   !*** ./src/firebase/firebase.utils.js ***!
   \****************************************/
