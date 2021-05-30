@@ -7,6 +7,7 @@ import CheckoutItem from 'Components/checkout-item/checkout-item';
 import { selectCartItems, selectCartTotal } from '~/js/redux/cart/cart.selectors';
 
 import './checkout.module.scss';
+import StripeCheckoutButton from 'Components/stripe-button/stripe-button';
 
 const CheckoutPage = ({ cartItems, total }) => pug`
   .checkout-page
@@ -30,7 +31,13 @@ const CheckoutPage = ({ cartItems, total }) => pug`
       CheckoutItem(cartItem=item key=item.id)
       
     .total
-      span='TOTAL: ' + total
+      span='TOTAL: ' + total + '$'
+    .test-warning
+      |*Please use the following test credit card for payments*
+      br
+      | 4242 4242 4242 4242 - Exp: 01/${new Date().getFullYear().toString().slice(2)} - CVV: 123
+    
+    StripeCheckoutButton(price=total)
 `;
 
 const mapStateToProps = createStructuredSelector({
